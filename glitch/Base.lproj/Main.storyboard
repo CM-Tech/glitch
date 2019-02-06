@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="13529"/>
+        <capability name="box content view" minToolsVersion="7.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Application-->
+        <scene sceneID="JPo-4y-FX3">
+            <objects>
+                <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="glitch" customModuleProvider="target"/>
+                <application id="hnw-xV-0zn" sceneMemberID="viewController">
+                    <menu key="mainMenu" title="Main Menu" systemMenu="main" id="AYu-sK-qS6"/>
+                    <connections>
+                        <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
+                    </connections>
+                </application>
+            </objects>
+            <point key="canvasLocation" x="75" y="0.0"/>
+        </scene>
+        <!--Glitch View Controller-->
+        <scene sceneID="hIz-AP-VOD">
+            <objects>
+                <viewController storyboardIdentifier="GlitchViewController" id="XfG-lQ-9wD" customClass="GlitchViewController" customModule="glitch" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
+                        <rect key="frame" x="0.0" y="0.0" width="261" height="113"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <customView fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sbi-Ml-doJ" customClass="PictureView" customModule="glitch" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="261" height="73"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wk4-xT-TD7">
+                                        <rect key="frame" x="2" y="18" width="81" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <buttonCell key="cell" type="push" bezelStyle="rounded" image="NSGoBackTemplate" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="gMN-LU-nnA">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                            <string key="keyEquivalent"></string>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="previous:" target="XfG-lQ-9wD" id="RMB-jZ-WFD"/>
+                                        </connections>
+                                    </button>
+                                    <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Bn-pw-h97">
+                                        <rect key="frame" x="176" y="18" width="81" height="32"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <buttonCell key="cell" type="push" bezelStyle="rounded" image="NSGoForwardTemplate" imagePosition="overlaps" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="AJx-AQ-h7f">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                            <string key="keyEquivalent"></string>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="next:" target="XfG-lQ-9wD" id="vIL-Mb-0TP"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </customView>
+                            <box fixedFrame="YES" boxType="custom" borderType="line" borderWidth="0.0" titlePosition="aboveBottom" translatesAutoresizingMaskIntoConstraints="NO" id="HBG-o7-aZu">
+                                <rect key="frame" x="0.0" y="74" width="261" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <view key="contentView" ambiguous="YES" id="j3d-Il-Wb4">
+                                    <rect key="frame" x="0.0" y="0.0" width="261" height="39"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SFc-FB-hHc">
+                                            <rect key="frame" x="168" y="2" width="66" height="32"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <buttonCell key="cell" type="push" title="Quit" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="3jT-0g-Htp">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                                <string key="keyEquivalent">q</string>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="quit:" target="XfG-lQ-9wD" id="UAm-lu-gQh"/>
+                                            </connections>
+                                        </button>
+                                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d4p-m0-mB2">
+                                            <rect key="frame" x="11" y="2" width="81" height="32"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="push" title="Rainbow" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="yQg-Nc-4d8">
+                                                <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                                <string key="keyEquivalent">r</string>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="rainbow:" target="XfG-lQ-9wD" id="gJM-Zu-vaK"/>
+                                            </connections>
+                                        </button>
+                                        <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IRb-L2-R9l">
+                                            <rect key="frame" x="92" y="6" width="76" height="26"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            <buttonCell key="cell" type="bevel" title="Toggle" bezelStyle="regularSquare" imagePosition="left" alignment="center" borderStyle="border" inset="2" id="NwQ-2X-EcZ">
+                                                <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                                                <font key="font" metaFont="system"/>
+                                                <string key="keyEquivalent" base64-UTF8="YES">
+IA
+</string>
+                                            </buttonCell>
+                                            <connections>
+                                                <action selector="toggle:" target="XfG-lQ-9wD" id="CIZ-iK-i3f"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                </view>
+                                <color key="borderColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                <color key="fillColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                            </box>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="sbi-Ml-doJ" id="Jjy-Nj-w12"/>
+                    </connections>
+                </viewController>
+                <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-34.5" y="576.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="NSGoBackTemplate" width="9" height="12"/>
+        <image name="NSGoForwardTemplate" width="9" height="12"/>
+    </resources>
+</document>
