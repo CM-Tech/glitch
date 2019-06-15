@@ -32,8 +32,8 @@ class GlitchViewController: NSViewController {
 
 extension GlitchViewController {
     static func create() -> GlitchViewController {
-        let storyboard = NSStoryboard(name: NSStoryboard.Name(rawValue: "Main"), bundle: nil)
-        let identifier = NSStoryboard.SceneIdentifier(rawValue: "GlitchViewController")
+        let storyboard = NSStoryboard(name: "Main", bundle: nil)
+        let identifier = "GlitchViewController"
         guard let viewcontroller = storyboard.instantiateController(withIdentifier: identifier) as? GlitchViewController else {
             fatalError("Why cant i find QuotesViewController? - Check Main.storyboard")
         }
@@ -99,5 +99,3 @@ class PictureView: NSView {
     }
 
 }
-
-
